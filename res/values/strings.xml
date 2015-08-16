@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">GameManager</string>
+	<string name="hello_world">Hello world!</string>
+	<string name="action_settings">Settings</string>
+
+	<!--  game manager Activity releated strings -->
+	<string name="empty_game_list">No Game to display</string>
+	<string name="no_serach_result">No Matching Game found</string>
+	
+	<!-- loading page related -->
+	<string name="loading">Loading...</string>
+</resources>

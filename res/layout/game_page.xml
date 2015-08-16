@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:paddingLeft="10dp"
+	android:paddingRight="10dp"
+	android:paddingTop="20dp"
+	android:paddingBottom="20dp"
+	android:layout_gravity="center_vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical">
+
+		<ImageView
+			android:id="@+id/GamePhoto"
+			android:layout_width="100dp"
+			android:layout_height="100dp"
+			android:layout_alignParentLeft="true"
+			android:layout_marginRight="5dp"
+			android:layout_marginLeft="10dp"
+			android:src="@drawable/chevron_left"/>
+
+		<TextView
+			android:id="@+id/GameTitle"
+			android:layout_toRightOf="@id/GamePhoto"
+			android:layout_alignParentRight="true"
+			android:textSize="18sp"
+			android:textColor="#91000000"
+			android:paddingLeft="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+		<RatingBar
+			android:id="@+id/GameRating"
+			android:layout_marginLeft="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@id/GamePhoto"
+			android:layout_below="@id/GameTitle"
+			style="?android:attr/ratingBarStyleSmall"
+			android:numStars="5"
+			android:stepSize="0.1"
+			android:rating="5"
+			android:isIndicator="true"/>
+
+		<TextView
+			android:id="@+id/GameRatingText"
+			android:layout_toRightOf="@id/GameRating"
+			android:layout_alignParentRight="true"
+			android:layout_below="@id/GameTitle"
+			android:textSize="15sp"
+			android:paddingLeft="25dp"
+			android:textColor="@color/black"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+	</RelativeLayout>
+
+	<!-- Description -->
+
+	<TextView
+		android:textSize="18sp"
+		android:paddingTop="10dp"
+		android:text="Description"
+		android:textColor="@color/black"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+
+	<TextView
+		android:id="@+id/GameDesc"
+		android:paddingTop="5dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="12sp"
+		android:textColor="@color/black"/>
+
+	<TextView
+		android:textSize="18sp"
+		android:paddingTop="10dp"
+		android:text="User Demographic"
+		android:textColor="@color/black"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+
+	<ListView
+		android:layout_marginTop="5dp"
+		android:id="@+id/country_list"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#00000000"/>
+
+	<RelativeLayout
+		android:layout_marginTop="20dp"
+		android:layout_alignBottom="@id/country_list"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		>
+
+		<Button
+			android:id="@+id/GameShare"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:text="SHARE"
+			android:textAllCaps="true"
+			android:background="#42000000"
+			android:textColor="#2175C8"
+			android:onClick="Share"
+			android:textSize="12sp"/>
+
+		<Button
+			android:id="@+id/AppStore"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:text="App store"
+			android:textAllCaps="true"
+			android:background="#42000000"
+			android:textColor="#2175C8"
+			android:textSize="12sp"
+			android:onClick="App"
+			android:layout_alignLeft="@+id/Sms"/>
+
+		<Button
+			android:id="@+id/back"
+			android:layout_marginTop="10dp"
+			android:layout_below="@id/GameShare"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:text="Back"
+			android:textAllCaps="true"
+			android:onClick="Back"
+			android:background="#42000000"
+			android:textColor="#2175C8"
+			android:textSize="12sp"/>
+
+		<Button
+			android:id="@+id/sms"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_below="@id/AppStore"
+			android:layout_alignParentRight="true"
+			android:onClick="Sms"
+			android:text="SMS"
+			android:textAllCaps="true"
+			android:background="#42000000"
+			android:textColor="#2175C8"
+			android:textSize="12sp"/>
+	</RelativeLayout>
+
+</LinearLayout>

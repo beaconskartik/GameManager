@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="7dip"
+    android:paddingBottom="7dip"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <TextView 
+        android:text="No. of API hits : " 
+        android:id="@+id/apihit" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:textSize="14dip" 
+        android:textStyle="bold" 
+        android:layout_marginRight="5dip" />
+    
+     <TextView 
+        android:text="Game Count : " 
+        android:layout_below="@id/apihit"
+        android:id="@+id/gamecount" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:textSize="14dip" 
+        android:textStyle="bold" 
+        android:layout_marginRight="5dip" />
+     
+</RelativeLayout> 

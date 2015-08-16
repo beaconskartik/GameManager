@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/gameManagerLayout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<android.support.v4.widget.SwipeRefreshLayout
+		android:id="@+id/game_list_view_swipe_container"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<ListView
+			android:id="@+id/game_list_view"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:divider="@color/gmae_list_divider_color"
+			android:dividerHeight="@dimen/gmae_list_divider_height"
+			android:fastScrollEnabled="true"/>
+	</android.support.v4.widget.SwipeRefreshLayout>
+	
+	<TextView
+		android:id="@+id/noGameListToDisplay"
+		style="@style/emptyContentTextView"
+		android:text="@string/empty_game_list"/>
+
+	<TextView
+		android:id="@+id/no_matching_game_found"
+		style="@style/emptyContentTextView"
+		android:text="@string/no_serach_result"
+		android:visibility="gone"
+		android:layout_marginLeft="@dimen/game_list_empty_text_view_margin_horizontal"
+		android:layout_marginRight="@dimen/game_list_empty_text_view_margin_horizontal"/>
+	
+	<!-- Loading Screen -->
+    <include
+        android:id="@+id/loading_view"
+        layout="@layout/loading_page_layout" />
+
+</FrameLayout>
